@@ -16,6 +16,8 @@ RUN apt-get update && \
       ca-certificates \
       git \
       wget \
+      unzip \
+      nano \
       locales && \
     locale-gen en_US en_US.UTF-8 && \
     update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
@@ -24,31 +26,33 @@ RUN apt-get update && \
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 
-# Add the ROS 2 Humble apt repository
-RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add - && \
-    sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends software-properties-common && \
+    add-apt-repository universe
+
+# Add the ROS 2 Humble GPG key into /usr/share/keyrings
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
+      | gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+# Add the ROS 2 Humble repository, referencing the keyring
+RUN sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
       http://packages.ros.org/ros2/ubuntu $(lsb_release -sc) main" \
       > /etc/apt/sources.list.d/ros2-latest.list'
 
-# Install ROS 2 Humble desktop (includes Gazebo, RViz, etc.)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      ros-humble-desktop && \
+      libusb-dev \
+      ros-humble-desktop-full \
+      ros-humble-joy \
+      ros-dev-tools \ 
+      ros-humble-gazebo-msgs \ 
+      ros-humble-gazebo-plugins \
+      ros-humble-gazebo-ros \
+      ros-humble-gazebo-ros2-control \
+      ros-humble-gazebo-ros-pkgs \
+      python3-colcon-common-extensions && \
     rm -rf /var/lib/apt/lists/*
-
-# Install ROS 2 build tools and rosdep
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-      python3-colcon-common-extensions \
-      python3-rosdep \
-      python3-vcstool \
-      python3-argcomplete \
-      python3-wstool \
-      python3-rosinstall \
-      python3-rosinstall-generator \
-      python3-pip && \
-    rm -rf /var/lib/apt/lists/*
-
+  
 # Initialize rosdep
 RUN rosdep init && rosdep update
 
@@ -62,6 +66,14 @@ RUN git clone https://github.com/HongbiaoZ/autonomous_exploration_development_en
 RUN cd cmu_exploration && \
     git checkout humble || echo "No 'humble' branch—proceeding with default branch"
 
+# Download the Gazebo environments
+WORKDIR /ros2_ws/src/cmu_exploration/src/vehicle_simulator/mesh
+RUN chmod +x download_environments.sh && \
+    ./download_environments.sh
+
+# Source
+
+WORKDIR /ros2_ws/install/
 # Install any missing dependencies via rosdep
 WORKDIR /ros2_ws
 RUN rosdep install --from-paths src/cmu_exploration/src --ignore-src -r -y || echo "rosdep failure is OK if no ROS 2 packages"

@@ -1,0 +1,9 @@
+1. Build cmu_exploration:latest image locally or pull remotely.
+
+2. Run the following command:
+docker run -it --rm \
+  --network host \
+  -e ROS_DOMAIN_ID=<your_domain_id> \
+  cmu_exploration:latest
+
+Replace <your_domain_id> with whichever domain you are using (used for ROS2 communication between container and local machine)
