@@ -48,6 +48,7 @@ RUN apt-get update && \
       ros-humble-gazebo-msgs \ 
       ros-humble-gazebo-plugins \
       iputils-ping \
+      iproute2 \
       ros-humble-gazebo-ros \
       ros-humble-gazebo-ros2-control \
       ros-humble-gazebo-ros-pkgs \
