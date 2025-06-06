@@ -7,4 +7,5 @@ docker run -it --rm \
   cmu_exploration:latest
 
 Replace <your_domain_id> with whichever domain you are using (used for ROS2 communication between container and local machine)
+echo $ROS_DOMAIN_ID
 -v flag can be used to bindmount directories containing config files and simulation resources
