@@ -47,9 +47,11 @@ RUN apt-get update && \
       ros-dev-tools \ 
       ros-humble-gazebo-msgs \ 
       ros-humble-gazebo-plugins \
+      iputils-ping \
       ros-humble-gazebo-ros \
       ros-humble-gazebo-ros2-control \
       ros-humble-gazebo-ros-pkgs \
+      net-tools \
       python3-colcon-common-extensions && \
     rm -rf /var/lib/apt/lists/*
   
