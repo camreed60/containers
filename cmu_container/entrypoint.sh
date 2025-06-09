@@ -1,11 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -e
 
-# Source ROS 2 Humble
+id -u ros &>/dev/null || adduser --quiet --disabled-password --gecos '' --uid ${UID:=1000} ros
+
 source /opt/ros/humble/setup.bash
+source /colcon_ws/install/setup.bash || true
 
-# Source the install space
-source /ros2_ws/install/setup.bash
-
-# Run the command passed to the container
 exec "$@"
