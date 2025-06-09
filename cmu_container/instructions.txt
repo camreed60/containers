@@ -1,11 +1,21 @@
-1. Build cmu_exploration:latest image locally or pull remotely.
+This container is meant to be a template for using the CMU exploration environments. Feel free to modify to your specific use case.
 
-2. Run the following command:
-docker run -it --rm \
-  --network host \
-  -e ROS_DOMAIN_ID=<your_domain_id> \
-  cmu_exploration:latest
+First: 
+chmod +x build.sh run.sh
 
-Replace <your_domain_id> with whichever domain you are using (used for ROS2 communication between container and local machine)
-echo $ROS_DOMAIN_ID
--v flag can be used to bindmount directories containing config files and simulation resources
+To build:
+./build.sh 
+** If downloading environments takes too long comment out in Dockerfile and download manually within container, instructions are as follows:
+  cd to /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh 
+  chmod +x download_environments.sh
+  ./download_environments.sh
+
+To run the container:
+./run.sh
+
+Remember to source both the container and the host machine using: source /opt/ros/humble/setup.bash
+
+Test host machine and container connectivity using ros2 run demo_nodes_cpp talker in one and ros2 run demo_nodes_cpp listener in the other
+
+Run "newgrp docker" when getting error messages when trying to run ./build.sh
+

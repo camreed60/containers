@@ -5,6 +5,15 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
+RUN apt-get update && apt-get install -y --no-install-recommends wget
+
+# Add microsoft GPG key and repo for vscode
+RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc \
+    | gpg --dearmor > /usr/share/keyrings/microsoft.gpg && \
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] \
+    https://packages.microsoft.com/repos/code stable main" \
+    > /etc/apt/sources.list.d/vscode.list
+
 # Install system tools, ROS packages & colcon
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -15,7 +24,6 @@ RUN apt-get update && \
       lsb-release \
       ca-certificates \
       git \
-      wget \
       unzip \
       nano \
       code \
@@ -48,8 +56,8 @@ RUN git clone https://github.com/HongbiaoZ/autonomous_exploration_development_en
     git checkout humble || true
 
 # Download the Gazebo environments
-WORKDIR /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh
-RUN chmod +x download_environments.sh && ./download_environments.sh
+#WORKDIR /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh
+#RUN chmod +x download_environments.sh && ./download_environments.sh
 
 # Install any missing ROS dependencies
 WORKDIR /colcon_ws
@@ -77,5 +85,5 @@ RUN echo 'alias build="colcon build --symlink-install --event-handlers console_d
     > /run.sh && \
     chmod +x /run.sh
 
-ENTRYPOINT ["/ros_entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash"]
