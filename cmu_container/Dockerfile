@@ -56,8 +56,8 @@ RUN git clone https://github.com/HongbiaoZ/autonomous_exploration_development_en
     git checkout humble || true
 
 # Download the Gazebo environments
-# WORKDIR /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh
-#RUN chmod +x download_environments.sh && ./download_environments.sh
+WORKDIR /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh
+RUN chmod +x download_environments.sh && ./download_environments.sh
 
 # Install any missing ROS dependencies
 WORKDIR /colcon_ws
