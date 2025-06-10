@@ -56,7 +56,7 @@ RUN git clone https://github.com/HongbiaoZ/autonomous_exploration_development_en
     git checkout humble || true
 
 # Download the Gazebo environments
-#WORKDIR /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh
+# WORKDIR /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh
 #RUN chmod +x download_environments.sh && ./download_environments.sh
 
 # Install any missing ROS dependencies
@@ -70,20 +70,6 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
 # Copy and enable the entrypoint script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-
-# Default launch command (override with -e LAUNCH_COMMAND=...)
-ENV LAUNCH_COMMAND='ros2 topic pub /talker std_msgs/msg/String "{data: Hello world}"'
-
-# Create convenient aliases and the run script
-RUN echo 'alias build="colcon build --symlink-install --event-handlers console_direct+"' >> /etc/bash.bashrc && \
-    echo 'alias run="su - ros --whitelist-environment=\"ROS_DOMAIN_ID\" /run.sh"' >> /etc/bash.bashrc && \
-    printf '%s\n' \
-      '#!/bin/bash' \
-      'source /colcon_ws/install/setup.bash' \
-      'echo UID: $UID; echo ROS_DOMAIN_ID: $ROS_DOMAIN_ID' \
-      '$LAUNCH_COMMAND' \
-    > /run.sh && \
-    chmod +x /run.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash"]

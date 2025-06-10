@@ -1,20 +1,16 @@
 services:
   cmu_container:
-    image: cmu_exploration:v1
+    image: cmu_container
     build:
       context: .
       dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
     restart: always
     network_mode: "host"
     ipc: host
-    pid: host
     environment:
-      - UID=${HOST_UID}
-      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
-      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - ROS_DOMAIN_ID=0
+      - FASTDDS_BUILTIN_TRANSPORTS=UDPv4
       - ROS_LOCALHOST_ONLY=0
 
-
-    command: su - ros \
-                --whitelist-environment=ROS_DOMAIN_ID,RMW_IMPLEMENTATION,ROS_LOCALHOST_ONLY \
-                /run.sh

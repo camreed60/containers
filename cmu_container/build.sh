@@ -1,8 +1,8 @@
 #!/bin/bash
+set -e
 
-export HOST_UID=$(id -u)
+# Show full build logs
 export BUILDKIT_PROGRESS=plain
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-  
-docker compose -f $SCRIPT_DIR/docker-compose.yml build 
+# Build the service
+docker compose -f /path/to/your/docker-compose.yml build 

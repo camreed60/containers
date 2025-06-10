@@ -1,11 +1,13 @@
 This container is meant to be a template for using the CMU exploration environments. Feel free to modify to your specific use case.
 
+Pertinent documentation: https://docs.docker.com/
+
 First: 
 chmod +x build.sh run.sh
 
 To build:
 ./build.sh 
-** If downloading environments takes too long comment out in Dockerfile and download manually within container, instructions are as follows:
+** If downloading environments takes too long comment out in Dockerfile and download manually within container, instructions are as follows **:
   cd to /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh 
   chmod +x download_environments.sh
   ./download_environments.sh
@@ -17,5 +19,15 @@ Remember to source both the container and the host machine using: source /opt/ro
 
 Test host machine and container connectivity using ros2 run demo_nodes_cpp talker in one and ros2 run demo_nodes_cpp listener in the other
 
-Run "newgrp docker" when getting error messages when trying to run ./build.sh
+Run 'newgrp docker' when getting error messages when trying to run ./build.sh
 
+'docker run -it --rm --net=host --ipc=host <IMAGE_NAME>'
+^ This allows containers to discover both nodes and messages from other containers.
+
+***TO ALLOW FOR THE CONTAINER AND THE HOST MACHINE TO SEE MESSAGES PUBLISHED BY THE OTHER DO THE FOLLOWING***:
+
+Ensure $FASTDDS_BUILTIN_TRANSPORTS is set to UDPv4 in both the container and the host. If this does not work, ensure ROS_DOMAIN_ID 
+and ROS_LOCALHOST_ONLY are set to 0 in both container and host machine.
+
+To run from command line:
+'docker run -it --rm --net=host --ipc=host -e FASTDDS_BUILTIN_TRANSPORTS=UDPv4 -e ROS_DOMAIN_ID=0 -e ROS_LOCALHOST_ONLY=0 <IMAGE_NAME>'
