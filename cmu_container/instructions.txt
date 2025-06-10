@@ -2,6 +2,8 @@ This container is meant to be a template for using the CMU exploration environme
 
 Pertinent documentation: https://docs.docker.com/
 
+Running 'xhost +local:root' will allow rviz to be displayed.
+
 First: 
 chmod +x build.sh run.sh
 

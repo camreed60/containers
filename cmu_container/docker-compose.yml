@@ -13,4 +13,9 @@ services:
       - ROS_DOMAIN_ID=0
       - FASTDDS_BUILTIN_TRANSPORTS=UDPv4
       - ROS_LOCALHOST_ONLY=0
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
 
