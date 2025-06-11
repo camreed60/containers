@@ -1,5 +1,6 @@
 Pertinent documentation: https://docs.docker.com/
 
+Source the workspace, then launch sim using 'ros2 launch vehicle_simulator system_forest.launch'
 Running 'xhost +local:root' will allow rviz to be displayed, run this if using cmu simulation.
 
 ***TO ALLOW FOR THE CONTAINER AND THE HOST MACHINE TO SEE MESSAGES PUBLISHED BY THE OTHER DO THE FOLLOWING***:

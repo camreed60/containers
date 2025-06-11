@@ -61,6 +61,7 @@ RUN chmod +x download_environments.sh && ./download_environments.sh
 
 # Custom trail environment
 COPY grass_dry.png /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh/forest/vrc_driving_terrain/materials/textures/grass_dry.png
+COPY grass.material /colcon_ws/src/cmu_exploration/src/vehicle_simulator/mesh/forest/vrc_driving_terrain/materials/scripts/grass.material
 
 # Install any missing ROS dependencies
 WORKDIR /colcon_ws
