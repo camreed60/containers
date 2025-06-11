@@ -1,0 +1,31 @@
+Pertinent documentation: https://docs.docker.com/
+
+Running 'xhost +local:root' will allow rviz to be displayed, run this if using cmu simulation.
+
+***TO ALLOW FOR THE CONTAINER AND THE HOST MACHINE TO SEE MESSAGES PUBLISHED BY THE OTHER DO THE FOLLOWING***:
+Ensure $FASTDDS_BUILTIN_TRANSPORTS is set to UDPv4 in both the container and the host. If this does not work, ensure ROS_DOMAIN_ID 
+and ROS_LOCALHOST_ONLY are set to 0 in both container and host machine.
+
+To see variable value in terminal: 'echo $<VAR_NAME>'
+To set variable value from terminal: 'export <VAR_NAME>=<VALUE>
+
+*** IF CLONING*
+
+First: 
+chmod +x build.sh run.sh
+
+Then build:
+./build.sh 
+
+To run the container:
+./run.sh
+
+Remember to source both the container and the host machine using: source /opt/ros/humble/setup.bash
+
+*** TO RUN IN COMMAND LINE (if downloading image from docker hub)
+docker run -it --rm --net=host --ipc=host reu_container:latest
+
+*** DEBUGGING ***
+Test host machine and container connectivity using ros2 run demo_nodes_cpp talker in one and ros2 run demo_nodes_cpp listener in the other
+
+Run 'newgrp docker' if getting issues from ./build.sh
