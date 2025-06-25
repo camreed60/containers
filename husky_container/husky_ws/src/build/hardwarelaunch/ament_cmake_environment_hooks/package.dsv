@@ -1,0 +1,4 @@
+source;share/hardwarelaunch/local_setup.bash
+source;share/hardwarelaunch/local_setup.dsv
+source;share/hardwarelaunch/local_setup.sh
+source;share/hardwarelaunch/local_setup.zsh

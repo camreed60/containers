@@ -1,0 +1,4 @@
+source;share/smartagurdf/local_setup.bash
+source;share/smartagurdf/local_setup.dsv
+source;share/smartagurdf/local_setup.sh
+source;share/smartagurdf/local_setup.zsh

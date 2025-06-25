@@ -1,0 +1,4 @@
+Invoking command in '/husky_ws/src/build/hardwarelaunch': /usr/bin/cmake --build /husky_ws/src/build/hardwarelaunch -- -j16 -l16
+Invoked command in '/husky_ws/src/build/hardwarelaunch' returned '0': /usr/bin/cmake --build /husky_ws/src/build/hardwarelaunch -- -j16 -l16
+Invoking command in '/husky_ws/src/build/hardwarelaunch': /usr/bin/cmake --install /husky_ws/src/build/hardwarelaunch
+Invoked command in '/husky_ws/src/build/hardwarelaunch' returned '0': /usr/bin/cmake --install /husky_ws/src/build/hardwarelaunch

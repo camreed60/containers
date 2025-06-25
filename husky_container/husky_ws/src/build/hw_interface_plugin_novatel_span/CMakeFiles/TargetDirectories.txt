@@ -1,0 +1,2 @@
+/husky_ws/src/build/hw_interface_plugin_novatel_span/CMakeFiles/edit_cache.dir
+/husky_ws/src/build/hw_interface_plugin_novatel_span/CMakeFiles/rebuild_cache.dir

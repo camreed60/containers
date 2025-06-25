@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbase_interface.a CMakeFiles/base_interface.dir/src/base_interface.cpp.o
+/usr/bin/ranlib libbase_interface.a

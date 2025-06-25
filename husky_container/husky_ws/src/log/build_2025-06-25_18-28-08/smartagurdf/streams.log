@@ -1,0 +1,37 @@
+[0.042s] Invoking command in '/husky_ws/src/build/smartagurdf': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /husky_ws/src/build/smartagurdf -- -j16 -l16
+[0.116s] Invoked command in '/husky_ws/src/build/smartagurdf' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /husky_ws/src/build/smartagurdf -- -j16 -l16
+[0.117s] Invoking command in '/husky_ws/src/build/smartagurdf': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /husky_ws/src/build/smartagurdf
+[0.128s] -- Install configuration: ""
+[0.128s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/config/config
+[0.128s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/config/config/joint_names_smartagurdf.yaml
+[0.128s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/launch/launch
+[0.129s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/launch/launch/display.launch.py
+[0.129s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/launch/launch/gazebo.launch.py
+[0.129s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes
+[0.129s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/front_right_wheel_link.STL
+[0.130s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/front_left_wheel_link.STL
+[0.131s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/base_link.STL
+[0.143s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/rear_left_wheel_link.STL
+[0.143s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/lidar_link.STL
+[0.144s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/rear_right_wheel_link.STL
+[0.146s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/zed_link.STL
+[0.146s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/gps_antenna_link.STL
+[0.147s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/meshes/meshes/realsense_link.STL
+[0.150s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/urdf/urdf
+[0.150s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/urdf/urdf/smartagurdf.urdf.xacro
+[0.150s] -- Installing: /husky_ws/src/install/smartagurdf/share/ament_index/resource_index/package_run_dependencies/smartagurdf
+[0.150s] -- Installing: /husky_ws/src/install/smartagurdf/share/ament_index/resource_index/parent_prefix_path/smartagurdf
+[0.151s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/environment/ament_prefix_path.sh
+[0.151s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/environment/ament_prefix_path.dsv
+[0.151s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/environment/path.sh
+[0.151s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/environment/path.dsv
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/local_setup.bash
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/local_setup.sh
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/local_setup.zsh
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/local_setup.dsv
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/package.dsv
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/ament_index/resource_index/packages/smartagurdf
+[0.152s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/cmake/smartagurdfConfig.cmake
+[0.153s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/cmake/smartagurdfConfig-version.cmake
+[0.153s] -- Installing: /husky_ws/src/install/smartagurdf/share/smartagurdf/package.xml
+[0.157s] Invoked command in '/husky_ws/src/build/smartagurdf' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /husky_ws/src/build/smartagurdf

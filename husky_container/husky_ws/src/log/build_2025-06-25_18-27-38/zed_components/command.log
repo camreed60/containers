@@ -1,0 +1,2 @@
+Invoking command in '/husky_ws/src/build/zed_components': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /husky_ws/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/zed_components
+Invoked command in '/husky_ws/src/build/zed_components' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /husky_ws/src/zed-ros2-wrapper/zed_components -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/zed_components

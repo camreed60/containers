@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhw_interface.a CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
+/usr/bin/ranlib libhw_interface.a

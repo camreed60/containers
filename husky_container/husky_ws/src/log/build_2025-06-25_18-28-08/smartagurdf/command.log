@@ -1,0 +1,4 @@
+Invoking command in '/husky_ws/src/build/smartagurdf': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /husky_ws/src/build/smartagurdf -- -j16 -l16
+Invoked command in '/husky_ws/src/build/smartagurdf' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /husky_ws/src/build/smartagurdf -- -j16 -l16
+Invoking command in '/husky_ws/src/build/smartagurdf': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /husky_ws/src/build/smartagurdf
+Invoked command in '/husky_ws/src/build/smartagurdf' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /husky_ws/src/build/smartagurdf

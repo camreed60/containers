@@ -25,7 +25,7 @@ RUN apt-get update && \
       > /etc/apt/sources.list.d/vscode.list && \
     rm -rf /var/lib/apt/lists/*
 
-# install ROS Desktop + extras + colcon  
+# install ROS Desktop + extras + colcon
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       build-essential \
@@ -60,10 +60,9 @@ RUN rosdep init && rosdep update
 # create workspace
 WORKDIR ${HUSKY_WS}
 
-# clone the required ROS 2 packages
+# clone the required ROS 2 packages (excluding ZED wrapper—mount it manually if needed)
 WORKDIR ${HUSKY_WS}/src
-RUN git clone https://github.com/stereolabs/zed-ros2-wrapper.git && \
-    git clone -b ros2 https://github.com/TixiaoShan/LIO-SAM.git lio-sam && \
+RUN git clone -b ros2 https://github.com/TixiaoShan/LIO-SAM.git lio-sam && \
     git clone -b humble https://github.com/HongbiaoZ/autonomous_exploration_development_environment.git cmu_exploration
 
 # copy your override YAMLs into each package as needed
@@ -76,10 +75,10 @@ COPY local_planner.launch.py \
 COPY params.yaml \
   ${HUSKY_WS}/src/lio-sam/config/params.yaml
 
-# install ROS dependencies
+# install ROS dependencies, skipping GTSAM rosdep (using system libgtsam-dev instead)
 WORKDIR ${HUSKY_WS}
-RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
-    rosdep install --from-paths src --ignore-src -r -y
+RUN rosdep update && \
+    rosdep install --from-paths src --ignore-src -r -y --skip-keys="gtsam" --rosdistro ${ROS_DISTRO}
 
 # build everything
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \

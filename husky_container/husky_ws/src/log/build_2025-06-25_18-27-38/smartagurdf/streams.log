@@ -1,0 +1,18 @@
+[0.020s] Invoking command in '/husky_ws/src/build/smartagurdf': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /husky_ws/src/smartagurdf -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/smartagurdf
+[0.081s] -- The C compiler identification is GNU 11.4.0
+[0.141s] -- The CXX compiler identification is GNU 11.4.0
+[0.148s] -- Detecting C compiler ABI info
+[0.222s] -- Detecting C compiler ABI info - done
+[0.231s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.231s] -- Detecting C compile features
+[0.232s] -- Detecting C compile features - done
+[0.235s] -- Detecting CXX compiler ABI info
+[0.322s] -- Detecting CXX compiler ABI info - done
+[0.332s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.332s] -- Detecting CXX compile features
+[0.333s] -- Detecting CXX compile features - done
+[0.337s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.498s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.657s] -- Configuring done
+[0.660s] -- Generating done
+[0.662s] -- Build files have been written to: /husky_ws/src/build/smartagurdf

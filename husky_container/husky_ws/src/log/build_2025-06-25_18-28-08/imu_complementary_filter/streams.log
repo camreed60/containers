@@ -1,0 +1,12 @@
+[0.041s] Invoking command in '/husky_ws/src/build/imu_complementary_filter': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /husky_ws/src/build/imu_complementary_filter -- -j16 -l16
+[0.115s] [ 20%] [32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter.cpp.o[0m
+[0.116s] [ 40%] [32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o[0m
+[0.123s] [01m[K/husky_ws/src/imu_complementary_filter/src/complementary_filter_ros.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kimu_complementary_filter/complementary_filter_ros.hpp: No such file or directory
+[0.123s]     1 | #include [01;31m[K"imu_complementary_filter/complementary_filter_ros.hpp"[m[K
+[0.123s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.123s] compilation terminated.
+[0.123s] gmake[2]: *** [CMakeFiles/complementary_filter.dir/build.make:90: CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o] Error 1
+[0.123s] gmake[2]: *** Waiting for unfinished jobs....
+[0.543s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/complementary_filter.dir/all] Error 2
+[0.543s] gmake: *** [Makefile:146: all] Error 2
+[0.546s] Invoked command in '/husky_ws/src/build/imu_complementary_filter' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /husky_ws/src/build/imu_complementary_filter -- -j16 -l16

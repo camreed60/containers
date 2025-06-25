@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbase_UDP_interface.a CMakeFiles/base_UDP_interface.dir/src/base_UDP_interface.cpp.o
+/usr/bin/ranlib libbase_UDP_interface.a

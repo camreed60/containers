@@ -1,0 +1,16 @@
+/husky_ws/src/install/hardwarelaunch/lib/hardwarelaunch/run.py
+/husky_ws/src/install/hardwarelaunch/share/ament_index/resource_index/package_run_dependencies/hardwarelaunch
+/husky_ws/src/install/hardwarelaunch/share/ament_index/resource_index/parent_prefix_path/hardwarelaunch
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/environment/ament_prefix_path.sh
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/environment/ament_prefix_path.dsv
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/environment/path.sh
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/environment/path.dsv
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/local_setup.bash
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/local_setup.sh
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/local_setup.zsh
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/local_setup.dsv
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/package.dsv
+/husky_ws/src/install/hardwarelaunch/share/ament_index/resource_index/packages/hardwarelaunch
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/cmake/hardwarelaunchConfig.cmake
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/cmake/hardwarelaunchConfig-version.cmake
+/husky_ws/src/install/hardwarelaunch/share/hardwarelaunch/package.xml

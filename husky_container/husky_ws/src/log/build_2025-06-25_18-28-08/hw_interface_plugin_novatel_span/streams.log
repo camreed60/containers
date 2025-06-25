@@ -1,0 +1,2 @@
+[0.043s] Invoking command in '/husky_ws/src/build/hw_interface_plugin_novatel_span': /usr/bin/cmake --build /husky_ws/src/build/hw_interface_plugin_novatel_span -- -j16 -l16
+[0.097s] Invoked command in '/husky_ws/src/build/hw_interface_plugin_novatel_span' returned '0': /usr/bin/cmake --build /husky_ws/src/build/hw_interface_plugin_novatel_span -- -j16 -l16
