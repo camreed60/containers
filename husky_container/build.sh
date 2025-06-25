@@ -5,4 +5,4 @@ set -e
 export BUILDKIT_PROGRESS=plain
 
 # Build the service
-docker compose -f /path/to/your/docker-compose.yml build 
+docker compose -f /home/cam/Desktop/coding/docker/husky_container/docker-compose.yml build

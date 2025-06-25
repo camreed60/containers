@@ -1,6 +1,6 @@
 services:
-  liosam_cmu_container:
-    image: liosam_cmu_container
+  husky_container:
+    image: husky_container
     build:
       context: .
       dockerfile: Dockerfile
@@ -17,4 +17,5 @@ services:
       - QT_X11_NO_MITSHM=1
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./husky_ws/src:/husky_ws/src
 
