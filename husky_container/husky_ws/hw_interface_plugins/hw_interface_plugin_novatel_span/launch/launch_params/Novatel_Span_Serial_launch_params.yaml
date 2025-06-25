@@ -1,0 +1,18 @@
+hw_interface_plugins:
+  ros__parameters:
+    # Map of plugin class keys → package names
+    plugin_names:
+      novatel_span_serial: hw_interface_plugin_novatel_span
+
+    # For each plugin class key, map its instance keys → instance names
+    novatel_span_serial:
+      novatel_span: "novatel_span"
+
+    # Parameters for the novatel_span instance
+    novatel_span:
+      deviceName:        "/dev/ttyUSB2"
+      baudrate:          115200
+      subscribeToTopic:  "/example/subscribe"
+      publishToTopic:    "/imu/data"
+      recordGPSData:     true
+      gpsDataFileName:   "/home/bramblebee/Desktop/data/gps_data_parking_lot.bin"
