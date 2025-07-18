@@ -1,3 +1,0 @@
-Invoking command in '/husky_ws/src/build/hw_interface_plugin_novatel_span': /usr/bin/cmake /husky_ws/src/hw_interface_plugins/hw_interface_plugin_novatel_span -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/hw_interface_plugin_novatel_span
-Invoked command in '/husky_ws/src/build/hw_interface_plugin_novatel_span' returned '0': /usr/bin/cmake /husky_ws/src/hw_interface_plugins/hw_interface_plugin_novatel_span -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/hw_interface_plugin_novatel_span
-Invoking command in '/husky_ws/src/build/hw_interface_plugin_novatel_span': /usr/bin/cmake --build /husky_ws/src/build/hw_interface_plugin_novatel_span -- -j16 -l16

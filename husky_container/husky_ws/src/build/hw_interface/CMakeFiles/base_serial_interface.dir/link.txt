@@ -1,2 +1,0 @@
-/usr/bin/ar qc libbase_serial_interface.a CMakeFiles/base_serial_interface.dir/src/base_serial_interface.cpp.o
-/usr/bin/ranlib libbase_serial_interface.a

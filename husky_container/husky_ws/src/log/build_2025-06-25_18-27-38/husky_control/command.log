@@ -1,1 +1,0 @@
-Invoking command in '/husky_ws/src/build/husky_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /husky_ws/src/husky_robot/husky_control -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/husky_control

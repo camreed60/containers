@@ -1,1 +1,0 @@
-Invoking command in '/husky_ws/src/build/smartagurdf': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /husky_ws/src/smartagurdf -DCMAKE_INSTALL_PREFIX=/husky_ws/src/install/smartagurdf
